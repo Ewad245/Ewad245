@@ -1,6 +1,6 @@
 ## Hi there 👋
 # 💫 About Me:
-I'm currently learning at Eastern Internation University<br>I'm looking for internship<br>I enjoy learning something new, always striving to be a better version everyday
+I'm currently learning at Eastern Internation University<br>I'm looking for internship<br>I'm interested in computer architecture and Generative AI<br>
 ## 🌐 Socials:
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/nguyễn-phan-minh-thiện-21343a255/) 
 
