@@ -1,30 +1,36 @@
-name: Update Contributor Stats
+name: Update GitHub Readme Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *" # Chạy tự động mỗi ngày
-  workflow_dispatch:     # Cho phép chạy thủ công
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   update-stats:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      # Sử dụng action tương thích để tạo ảnh SVG
-      - name: Generate Contributor SVG
+      - name: Generate All Stats Cards
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           token: ${{ secrets.GH_TOKEN }}
-          card: stats
-          path: profile/contributor-stats.svg
-          # Bạn có thể thêm các tùy chỉnh theme/limit ở đây
-          options: theme=dark&show_icons=true
+          path: profile/ # Tất cả ảnh sẽ vào thư mục này
+          options: theme=dark&username=Ewad245
+        # Lưu ý: Action này sẽ tự tạo các file stats.svg và top-langs.svg
+
+      # Vì thẻ Streak Stats dùng một công cụ khác, bạn có thể dùng link mirror ổn định
+      # hoặc tạm thời dùng link trực tiếp nếu chưa muốn cài thêm Action phức tạp.
 
       - name: Commit & Push
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add profile/contributor-stats.svg
-          git commit -m "Update contributor statistics" || exit 0
-          git push
+          git config --global user.email "github-actions[bot]@://github.com"
+          mkdir -p profile
+          git add profile/*.svg
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update all github stats"
+            git push origin main
+          fi
