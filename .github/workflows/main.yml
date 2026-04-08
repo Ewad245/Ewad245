@@ -13,7 +13,7 @@ jobs:
 
       # Sử dụng action tương thích để tạo ảnh SVG
       - name: Generate Contributor SVG
-        uses: soulteary/github-readme-stats-action@v1.3.2
+        uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           token: ${{ secrets.GH_TOKEN }}
           card: stats
