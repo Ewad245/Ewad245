@@ -1,0 +1,30 @@
+name: Update Contributor Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Chạy tự động mỗi ngày
+  workflow_dispatch:     # Cho phép chạy thủ công
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Sử dụng action tương thích để tạo ảnh SVG
+      - name: Generate Contributor SVG
+        uses: soulteary/github-readme-stats-action@v1.3.2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          card: stats
+          path: profile/contributor-stats.svg
+          # Bạn có thể thêm các tùy chỉnh theme/limit ở đây
+          options: theme=dark&show_icons=true
+
+      - name: Commit & Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/contributor-stats.svg
+          git commit -m "Update contributor statistics" || exit 0
+          git push
