@@ -13,7 +13,7 @@ I'm currently learning at Eastern Internation University<br>I'm looking for inte
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Ewad245&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=Ewad245&limit=5&theme=dark&combine_all_yearly_contributions=true)
+![Contributor Stats](./profile/contributor-stats.svg)
 
 ---
 [![](https://visitcount.itsvg.in/api?id=Ewad245&icon=0&color=1)](https://visitcount.itsvg.in)
