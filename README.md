@@ -2,7 +2,7 @@
 # 💫 About Me:
 I'm currently learning at Eastern Internation University<br>I'm looking for internship<br>I'm interested in computer architecture and Generative AI<br>
 ## 🌐 Socials:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/nguyễn-phan-minh-thiện-21343a255/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/nguyễn-phan-minh-thiện-21343a255/)</br>
 [![Static Badge](https://img.shields.io/badge/porfolio-me?style=for-the-badge&labelColor=rgb(251%2C%20243%2C%20185)&color=rgb(212%2C%20246%2C%20255))](https://thiennguyen.dpdns.org)
 
 # 💻 Tech Stack:
